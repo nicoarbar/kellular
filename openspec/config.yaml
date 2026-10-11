@@ -1,0 +1,32 @@
+schema: spec-driven
+
+context: |
+  Kellular builds a tumor digital twin ("tumor twin") from a patient's omics data to (1) rank
+  existing treatments, (2) match clinical trials, and later (3) design new molecules/vaccines.
+  v0 scope: metastatic colorectal cancer (mCRC) with liver and/or lung metastases.
+  Research use only - outputs are hypotheses, never treatment decisions.
+
+  Guiding principle: every capability must be checkable against real patient outcomes. The
+  differentiator is closing the cell line/organoid -> patient gap. Synthetic data from models never
+  counts as ground truth.
+
+  Tech stack: Python >=3.11, uv, src layout (src/kellular/{schema,ingest,profile,predict,trials}),
+  pydantic v2, AnnData/h5ad and Parquet for data, pytest, ruff. nf-core pipelines for raw FASTQ.
+  Terraform (infra/terraform) for later cloud deployment (AWS, Hugging Face, neo-clouds); local
+  compute only until Phase 3.
+
+  Conventions: GRCh38; Ensembl gene IDs as primary keys (HGNC symbols secondary); protein changes in
+  HGVS p. notation. Patient data never committed (data/ is gitignored).
+
+  Licensing: code under Apache-2.0. Third-party data is never redistributed. Every external source
+  must be registered in docs/DATA_SOURCES.md with owner, license, citation, and access tier before
+  ingestion. Roadmap: docs/ROADMAP.md. Background notes (Spanish): info/.
+
+rules:
+  proposal:
+    - State which data sources the change depends on and whether they are open or controlled access
+    - Include a "Non-goals" bullet list
+  specs:
+    - Never specify behavior that presents output as a clinical recommendation
+  design:
+    - Record the license implications of any new model or dataset (e.g. non-commercial weights)

@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Data: never commit patient or third-party data
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+*.h5ad
+*.h5
+*.loom
+*.rds
+*.mtx
+*.mtx.gz
+*.parquet
+*.vcf
+*.vcf.gz
+*.maf
+*.bam
+*.bai
+*.cram
+*.sam
+*.bed
+*.fastq*
+*.fq
+*.fq.gz
+*.fasta.gz
+*.pdb
+*.tsv.gz
+*.csv.gz
+# Patient-level or clinical tables placed anywhere
+*patient*
+*clinical_export*
+*.dcm
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Nextflow
+work/
+.nextflow*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Local-only editor/agent config (per-user, may hold local paths or tokens)
+.claude/settings.local.json

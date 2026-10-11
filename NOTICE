@@ -1,0 +1,14 @@
+Kellular
+Copyright 2026 The Kellular contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party data and models
+---------------------------
+Kellular does not redistribute third-party datasets or model weights. Each
+external source used by the project (e.g. TCGA/GDC, CPTAC, DepMap, GDSC,
+cBioPortal studies, Tahoe-100M, CELLxGENE, ChEMBL, Open Targets, Reactome)
+remains the property of its owners and is used under its own license and
+terms of access. The authoritative list of sources, their licenses, required
+citations and access tier lives in docs/DATA_SOURCES.md and must be updated
+before any new source is ingested.
