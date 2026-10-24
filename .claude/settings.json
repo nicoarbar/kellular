@@ -1,10 +1,4 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(grep -n -A6 '\"name\": \"scientific-problem-selection\"' \"/c/Users/borom/.claude/plugins/marketplaces/life-sciences/.claude-plugin/marketplace.json\")",
-      "Read(//c/Users/borom/.claude/plugins/marketplaces/life-sciences/.claude-plugin/**)"
-    ]
-  },
   "enabledPlugins": {
     "huggingface-skills@claude-plugins-official": true,
     "scientific-problem-selection@life-sciences": true,
