@@ -1,5 +1,3 @@
-# CLAUDE.md
-
 Kellular has the objective to build a simulation model, such as a tumor digital twin, that can create and validate molecules that outsmart cancer with personal oncology data. It is about building this model that can become a digital twin from the tumor that can replicate or simulate digitally its dynamic behaviour. 
 
 The purpose for this model would be to simulate:
